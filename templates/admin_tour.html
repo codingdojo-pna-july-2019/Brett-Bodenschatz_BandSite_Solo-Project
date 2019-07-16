@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="{{ url_for('static', filename='tour.js') }}"></script>
+        <title>Admin Tour Editer</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="/admin_home">Awesome Band</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a href="/admin_home" class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/admin_tour" class="nav-link" href="#">Tours</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/merch" class="nav-link" href="#">Merch</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/listen" class="nav-link" href="#">Listen</a>
+                    </li>
+                </ul>
+            </div>   
+        </nav>
+        
+        <div class="container">
+            <form action="/add_tour" method="POST" id="addTour">
+                <div id="dateMsg"></div>
+                <div class="form-group">
+                    <label for="venue">Enter Venue Name</label>
+                    <input type="text" class="form-control" name="venue" placeholder="Trocadero">
+                </div>
+                <div class="form-group">
+                    <label for="location">Enter Venue Location</label>
+                    <input type="text" class="form-control" name="location" placeholder="Philadelphia, PA">
+                </div>
+                <div class="form-group"> 
+                    <label for="date">Enter Tour Date</label>
+                    <input type="date" class="form-control" name="date" placeholder="12/23/1995">
+                </div>
+                <button type="submit" class="btn btn-primary">Add Tour</button>
+            </form>
+
+            <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Venue</th>
+                            <th scope="col">Location</th>
+                            <th scope="col">Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for tours in all_tours %}
+                            <tr>
+                                <th scope="row">
+                                    <button>
+                                        <a href="/tours/{{tours.id}}/edit">edit</a>
+                                    </button>
+                                    <form action="/tours/{{tours.id}}/delete" method="POST">
+                                        <input type="submit" value="delete">
+                                    </form></th>
+                                <td>{{tours.venue}}</td>
+                                <td>{{tours.location}}</td>
+                                <td>{{tours.date}}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+            </table>
+        </div>
+        
+                
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
+    </body>
+</html>

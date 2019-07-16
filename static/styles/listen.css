@@ -1,0 +1,23 @@
+body {
+    background-image: url(/static/images/stage.jpg)
+}
+
+img {
+    max-width: 300px;
+    max-height: 300px;
+}
+
+.navbar-brand img {
+    max-height: 50px;
+}
+
+
+.container h3 {
+    color: white;
+}
+
+    .card {
+        display: inline-block;
+        margin: 50px;
+    }
+

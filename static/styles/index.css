@@ -1,0 +1,47 @@
+body {
+    background-image: url(/static/images/band.jpg)
+}
+
+.navbar-brand img {
+    max-height: 50px;
+}
+
+.jumbotron {
+    background-image: url(/static/images/band_bass.jpg)
+}
+    .jumbotron p {
+        color: white;
+    }
+
+.carousel-item {
+    max-width: 1100px;
+    max-height: 500px
+}
+
+
+.card {
+    margin: 10px;
+}
+
+    .card-body img {
+        max-width: 40px;
+        max-height: 40px;
+    }
+
+
+.merch_btn {
+    display: inline-block;
+}
+
+    .merch_btn img {
+        float: left;
+        margin-top: 25px;
+        margin-right: 50;
+    }
+
+    .merch_btn a {
+        float: right;
+        margin-top: 200px;
+        margin-left: 150px;
+    }
+

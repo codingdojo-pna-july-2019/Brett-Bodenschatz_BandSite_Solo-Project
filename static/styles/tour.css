@@ -1,0 +1,16 @@
+body {
+    background-image: url(/static/images/band.jpg)
+}
+
+.navbar-brand img {
+    max-height: 50px;
+}
+
+.container img {
+    width: 1110px;
+    max-height: 500px;
+}
+
+.table {
+    background-image: url(/static/images/white.png)
+}

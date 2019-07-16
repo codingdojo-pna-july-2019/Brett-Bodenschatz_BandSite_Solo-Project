@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles/index.css')}}">
+        <title>Band Page</title>
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="/admin_home">Awesome Band</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+                
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a href="/" class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/admin_tour" class="nav-link" href="#">Tours</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/merch" class="nav-link" href="#">Merch</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/listen" class="nav-link" href="#">Listen</a>
+                    </li>
+                </ul>
+            </div>   
+        </nav>            
+        
+
+        <a href="/logout" type="button" class="btn btn-link">Logout</a>
+        <div class="container">
+
+            <div id="carousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="jumbotron">
+                            <h1 class="display-4"><img src="/static/images/customlogoresize.png"></h1>
+                            <p class="lead">Never forget to keep on rocking! <a href="/merch" type="link">New album</a> out now!</p>
+                            <hr class="my-4">
+                            <div class="merch_btn">
+                                <a class="btn btn-dark btn-lg" href="/merch" role="button">Merch →</a>
+                                <img src="../static/images/cover2.jpg" class="d-block w-25" alt="...">
+                            </div>                       
+                        </div> 
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../static/images/concert.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h4>Don't forget to see when we will be in YOUR city!</h4>
+                            <a class="btn btn-dark btn-lg" href="/tour" role="button">Tour Dates →</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../static/images/stage.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3>Haven't heard us before? Stop by our <a href="/listen" type="link">Listen</a> page to hear some tunes!</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    Now on Social Media!
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Click Below to Follow us!</h5>
+                    <a href="#"><img src="/static/images/fbicon.png"></a>
+                    <a href="#"><img src="/static/images/insicon.png"></a>
+                    <a href="#"><img src="/static/images/twicon.png"></a>
+                </div>
+            </div>
+
+        </div>
+    
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
+    </body>
+</html>

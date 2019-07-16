@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles/merch.css')}}">
+        <title>Merch</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="/"><img src="/static/images/customlogo.png"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                        
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a href="/" class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/tour" class="nav-link" href="#">Tours</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/merch" class="nav-link" href="#">Merch</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/listen" class="nav-link" href="#">Listen</a>
+                        </li>
+                    </ul>
+                </div>   
+        </nav>
+        <div class="container">
+            <div class="card" style="width: 18rem;" style="margin: 10px 10px 10px 10xp;">
+                <img src="../static/images/bandt.jpg" class="card-img-top" alt="image1">
+                <div class="card-body">
+                    <h5 class="card-title">Music Band T</h5>
+                    <p class="card-text">Equip yourself with this high quality cotton blend T-shirt for the ultimate concert comfort.</p>
+                    <form action="your-server-side-code" method="POST">
+                        <script
+                            src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                            data-key="pk_test_WLyzvCTM7EHcCivELEUMMWQe00hkKfQw3T"
+                            data-amount="1999"
+                            data-name="Music Band T"
+                            data-description="Widget"
+                            data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+                            data-locale="auto">
+                        </script>
+                    </form>
+                </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+                <img src="../static/images/bandt2.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Another Band T</h5>
+                    <p class="card-text">You can never have too many Band T-shirts!</p>
+                    <form action="your-server-side-code" method="POST">
+                        <script
+                            src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                            data-key="pk_test_WLyzvCTM7EHcCivELEUMMWQe00hkKfQw3T"
+                            data-amount="1999"
+                            data-name="Another Band T"
+                            data-description="Widget"
+                            data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+                            data-locale="auto">
+                        </script>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="card" style="width: 18rem;">
+                <img src="../static/images/mug1.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Band Importanter Mug</h5>
+                    <p class="card-text">Who need education when you can have band instead.</p>
+                    <form action="your-server-side-code" method="POST">
+                        <script
+                            src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                            data-key="pk_test_WLyzvCTM7EHcCivELEUMMWQe00hkKfQw3T"
+                            data-amount="999"
+                            data-name="Music Importanter Mug"
+                            data-description="Widget"
+                            data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+                            data-locale="auto">
+                        </script>
+                    </form>
+                </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+                <img src="../static/images/mug2.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Without Music Mug</h5>
+                    <p class="card-text">Simply put, without music life would be flat.</p>
+                    <form action="your-server-side-code" method="POST">
+                        <script
+                            src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                            data-key="pk_test_WLyzvCTM7EHcCivELEUMMWQe00hkKfQw3T"
+                            data-amount="1499"
+                            data-name="Awesome Band Shop"
+                            data-description="Widget"
+                            data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+                            data-locale="auto">
+                        </script>
+                    </form>
+                </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+                <img src="../static/images/cover.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Music Album</h5>
+                    <p class="card-text">Our first kick-ass album available now with free bonus content!</p>
+                    <form action="your-server-side-code" method="POST">
+                        <script
+                            src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                            data-key="pk_test_WLyzvCTM7EHcCivELEUMMWQe00hkKfQw3T"
+                            data-amount="1999"
+                            data-name="Music Album"
+                            data-description="Widget"
+                            data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+                            data-locale="auto">
+                        </script>
+                    </form>
+                </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+                <img src="../static/images/cover2.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">New Music Album</h5>
+                    <p class="card-text">Check out our newest album!</p>
+                    <form action="your-server-side-code" method="POST">
+                        <script
+                            src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                            data-key="pk_test_WLyzvCTM7EHcCivELEUMMWQe00hkKfQw3T"
+                            data-amount="1999"
+                            data-name="New Album"
+                            data-description="Widget"
+                            data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+                            data-locale="auto">
+                        </script>
+                    </form>
+                </div>
+            </div>            
+        </div>    
+                
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
+    </body>
+</html>

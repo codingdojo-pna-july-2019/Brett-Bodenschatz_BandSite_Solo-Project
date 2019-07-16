@@ -1,0 +1,20 @@
+body {
+    background-image: url(/static/images/band.jpg)
+}
+
+.navbar-brand img {
+	max-height: 50px;
+}
+
+.card {
+	display: inline-block;
+	width: 500px;
+	height: 425px;
+	vertical-align: top;
+	padding: 10px 10px 10px 10px;
+	margin: 10px 10px 10px 10px;
+}
+.container img {
+	max-height: 200px;
+	max-width: 150px;
+}
